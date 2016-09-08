@@ -90,4 +90,53 @@ $(document).ready(function() {
     //     });
     // });
 
+
+    // Filter range
+    $('.slider_range').slider({
+		range: true,
+		min: 100,
+		max: 5000,
+		values: [ 750, 3000 ],
+		stop: function( event, ui ) {
+			var wrap = $(this).parent('.cat_filter_item');
+			var min = wrap.find('.min_val');
+			var max = wrap.find('.max_val');
+			min.val($(this).slider("values",0));
+			max.val($(this).slider("values",1))
+		},
+		slide: function( event, ui ) {
+			var wrap = $(this).parent('.cat_filter_item');
+			var min = wrap.find('.min_val');
+			var max = wrap.find('.max_val');
+			min.val($(this).slider("values",0));
+			max.val($(this).slider("values",1))
+		}
+	});
+
+	$('.cat_filter_item_name').on('click', function(event) {
+		event.preventDefault();
+		$(this).parent().toggleClass('open');
+	});
+
+
+	$('.view_row').click(function(event) {
+		
+		$(this).addClass('active');
+		$('.view_grid').removeClass('active');
+
+		$('.catalog_list_wrapper').addClass('open');
+		$('.catalog_grid_wrapper').removeClass('open');
+
+	});
+
+	$('.view_grid').click(function(event) {
+
+		$(this).addClass('active');
+		$('.view_row').removeClass('active');
+
+		$('.catalog_grid_wrapper').addClass('open');
+		$('.catalog_list_wrapper').removeClass('open');
+		
+	});
+
 });

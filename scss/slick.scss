@@ -166,3 +166,30 @@ $color_gray_el:                                 #3a3a3a;
         }
     }
 }
+
+.slick-vertical {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    .slick-arrow {
+        width: 370px;
+        height: 26px;
+        border: 1px solid #e6e6e6;
+        @include trs(.3s);
+        &:hover {
+            background-color: #fafafa;
+        }
+    }
+    .slick-prev {
+        top: 0;
+        left: 0;
+        margin: 0;
+        background: image-url('vert_top.png') no-repeat center center #fff;
+    }
+    .slick-next {
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: auto;
+        background: image-url('vert_bottom.png') no-repeat center center #fff;
+    }
+}

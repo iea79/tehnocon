@@ -2613,6 +2613,15 @@ textarea {
 	}
 }
 
+// Help page --------------------------------
+.help_item {
+	padding-left: 40px;
+	padding-bottom: 49px;
+	a {
+		color: $color_danger;
+	}
+}
+
 /* Footer
  ----------------------------------------------------------------------------- */
 .footer {

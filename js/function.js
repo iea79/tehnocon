@@ -143,13 +143,13 @@ $(document).ready(function() {
 	});
 
 	// Tabs swicher
-	$('.tabs').on('click', '.tabs_link', function(event) {
+	$('.tabs').on('click', 'a', function(event) {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		// console.log($(target));
-		$('.tabs_link').removeClass('active');
+		$('.tabs a').removeClass('active');
 		$(this).addClass('active');
-		$('.tabs_wrapp_item').removeClass('active');
+		$('.tabs_wrapp > div').removeClass('active');
 		$(''+target+'').addClass('active');
 	});
 

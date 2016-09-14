@@ -6,12 +6,13 @@
 	<title></title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<meta name="viewport" content="wispanh=1200" />
+	<meta name="viewport" content="width=1200" />
 
 	<link href="css/slick.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/modal.js"></script>
 	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
@@ -547,19 +548,21 @@
 				<!-- end product_cart -->
 
 				<!-- begin product_swicher -->
-				<div class="product_swicher">
-					<a href="#" class="product_swicher_link active">Характеристики</a>	
-					<a href="#" class="product_swicher_link">Отзывы (7)</a>	
-					<a href="#" class="product_swicher_link">Отзывы на Яндекс.Маркет (3)</a>	
-					<a href="#" class="product_swicher_link">Описание</a>	
-					<a href="#" class="product_swicher_link">Оплата</a>	
-					<a href="#" class="product_swicher_link">Гарантия</a>	
+				<!-- для переключения вкладкки добавлять класс active для tabs_link и tabs_wrapp_item  -->
+				<!-- Авто переключение по id -->
+				<div class="product_swicher tabs">
+					<a href="#harakteristiki" class="product_swicher_link active">Характеристики</a>	
+					<a href="#reviews" class="product_swicher_link">Отзывы (7)</a>	
+					<a href="#yandex_rev" class="product_swicher_link">Отзывы на Яндекс.Маркет (3)</a>	
+					<a href="#description" class="product_swicher_link">Описание</a>	
+					<a href="#payments" class="product_swicher_link">Оплата</a>	
+					<a href="#warranty" class="product_swicher_link">Гарантия</a>	
 				</div>
 				<!-- end product_swicher -->
 
 				<!-- begin product_tabs -->
-				<div class="product_tabs">
-					<div class="product_tabs_item product_tabs_item-features active">
+				<div class="product_tabs tabs_wrapp">
+					<div id="harakteristiki" class="product_tabs_item product_tabs_item-features active">
 						<ul>
 							<li>
 								<span>Тип</span>
@@ -595,11 +598,210 @@
 							</li>
 						</ul>
 					</div>
-					<div class="product_tabs_item product_tabs_item-review"></div>
-					<div class="product_tabs_item product_tabs_item-review-yand"></div>
-					<div class="product_tabs_item product_tabs_item-description"></div>
-					<div class="product_tabs_item product_tabs_item-payments"></div>
-					<div class="product_tabs_item product_tabs_item-warranty"></div>
+					<div id="reviews" class="product_tabs_item product_tabs_item-review">
+						
+						<div class="review_row">
+							<div class="review_row_left">
+								<div class="review_row_name">Якушин Олег Анатольевич</div>
+								<div class="review_row_date">08.03.2016, 22:27</div>
+								<div class="review_row_rate">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+								</div>
+							</div>
+							<div class="review_row_text">
+								<p>Отличный фен, покупал жене на восьмое марта</p>
+								<p><b>Достоинства:</b><br>
+								Цена, надёжность</p>
+								<p><b>Недостатки:</b><br>
+								Немного люфтит пластик на стыках, но за такие деньги это скорее придирка, чем реальный недостаток</p>
+							</div>
+						</div>
+						<div class="review_row">
+							<div class="review_row_left">
+								<div class="review_row_name">Якушин Олег Анатольевич</div>
+								<div class="review_row_date">08.03.2016, 22:27</div>
+								<div class="review_row_rate">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+									<img src="img/rev_star.png" alt="">
+								</div>
+							</div>
+							<div class="review_row_text">
+								<p>Отличный фен, покупал жене на восьмое марта</p>
+								<p><b>Достоинства:</b><br>
+								Цена, надёжность</p>
+								<p><b>Недостатки:</b><br>
+								Немного люфтит пластик на стыках, но за такие деньги это скорее придирка, чем реальный недостаток</p>
+							</div>
+						</div>
+						<div class="review_row_more">
+							<button class="btn btn_danger" data-toggle="modal" data-target="#add_review">Добавить отзыв</button>
+						</div>
+
+					</div>
+					<div id="yandex_rev" class="product_tabs_item product_tabs_item-review-yand"></div>
+					<div id="description" class="product_tabs_item product_tabs_item-description"></div>
+					<div id="payments" class="product_tabs_item product_tabs_item-payments">
+
+						<p>Все счета выписываются по тем ценам, которые опубликованы в нашем магазине в момент размещения заказа. Цены включают в себя все налоги.</p>
+
+						<div class="pay_row">
+							<div class="pay_row_img"><img src="img/pay1.png" alt=""></div>
+							<div class="pay_row_text">
+								<div class="pay_row_title">Наличными курьеру</div>
+								<div class="pay_row_description">Оплата производится после проверки внешнего вида, проверки комплектности и работоспособности устройства. После оплаты Вам передается полный пакет документов (кассовый чек и товарный чек, гарантийный талон, инструкция).</div>
+							</div>
+						</div>
+						<div class="pay_row">
+							<div class="pay_row_img"><img src="img/pay2.png" alt=""></div>
+							<div class="pay_row_text">
+								<div class="pay_row_title">Безналичным платежом <span class="text_danger">БЕЗ КОМИССИИ</span></div>
+								<div class="pay_row_description">Вы можете оплатить заказ через любой банк, действующий на территории России. На ваш e-mail будет выслан счет, который Вы сможете оплатить в удобном для Вас банке. Перевод денег необходимо осуществлять только после уточнения всех деталей оформления заказа с менеджером по телефону. <br>
+								<span class="text_danger">Внимание!</span> При совершении безналичного общую стоимость заказа необходимо уточнить у менеджера.</div>
+							</div>
+						</div>
+						<div class="pay_row">
+							<div class="pay_row_img"><img src="img/pay3.png" alt=""></div>
+							<div class="pay_row_text">
+								<div class="pay_row_title">Банковской картой у экспедитора</div>
+								<div class="pay_row_description">К оплате принимаются пластиковые карты платёжных систем VISA и MasterCard. Оплата производится посредством мобильного банковского терминала (Москва и МО) при получении заказа. Оплата может быть осуществлена только владельцем карты. Экспедитор проверяет карту и связывается по телефону с банком, предоставляющим услуги эквайринга для проверки кода карты. Экспедитор имеет право попросить предъявить документ, удостоверяющий личность владельца карты, для сверки с заказом и с данными карты. В случае, если Вы оплатили заказ банковской карточкой и затем отказались от него, возврат переведенных средств производится на Ваш банковский счет. <br>
+								<span class="text_danger">Внимание!</span> При оплате банковской картой у экспедитора общую стоимость заказа необходимо уточнить у менеджера.</div>
+							</div>
+						</div>
+						<div class="pay_row">
+							<div class="pay_row_img"><img src="img/pay4.png" alt=""></div>
+							<div class="pay_row_text">
+								<div class="pay_row_title">Банковской картой On-line</div>
+								<div class="pay_row_description">К оплате принимаются пластиковые карты платёжных систем VISA и MasterCard. Для самостоятельной оплаты банковской картой On-line необходимо оплатить счет, который выставляет мендежер после уточнения и согласования всех деталей по телефону. Ввод данных происходит в системе электронных платежей ПАО АКБ «Авангард», которая прошла сертификацию в платежных системах Visa и MasterCard, после согласования итоговой суммы заказа с учетом доставки и формирования счета менеджером интернет-магазина. <br>
+								<span class="text_danger">Внимание!</span> При оплате картой On-line общую стоимость заказа необходимо уточнить у менеджера. </div>
+							</div>
+						</div>
+
+						<p>Представленные Вами данные полностью защищены и никто, включая наш интернет-магазин, не может их получить.</p>
+
+						<p><a href="#" class="text_danger">Политика конфиденциальности персональных данных >>></a></p>
+						
+					</div>
+					<div id="warranty" class="product_tabs_item product_tabs_item-warranty">
+
+						<p>Вся техника нашего интернет-магазина сертифицирована и имеет официальную гарантию производителя.</p>
+
+						<p>Гарантийные сроки отмеченные на талоне, позволяют Вам бесплатно воспользоваться услугами ремонта на всем протяжении срока их действия при условии соблюдении эксплуатационных требований, установленных фирмой-производителем.</p>
+
+						<p>Обмен и возврат осуществляется согласно законодательству РФ и при обязательном участии независимой экспертизы, при наличии чеков, документации, упаковочной коробки и всех аксессуаров, входящих в комплект поставки.</p>
+
+						<p>
+							<div class="text_danger">Внимание!</div>
+							Доставка неисправного изделия до официального авторизованного сервисного центра осуществляется за счет покупателя.
+						</p>
+
+						<p>Покупатель вправе отказаться от заказанного товара в любое время до его получения, а после получения товара – в течение 7 (семи) календарных дней с даты получения товара, при условии, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного товара. Продавец возвращает Покупателю стоимость оплаченного товара, за вычетом стоимости доставки товара, в течение десяти дней со дня предъявления Покупателем соответствующего требования. Согласно п. 1 ст. 25 Закона РФ «Защите прав потребителей» от 07.02.1992 № 2300-1 (http://www.consultant.ru/popular/consumerism/) невозможен возврат товара, бывшего в употреблении. При отказе Покупателя от заказанного Товара Продавец удерживает из суммы, уплаченной Покупателем за Товар в соответствии с договором, расходы Продавца на доставку от Покупателя возвращённого товара.</p>
+
+						<p>Покупатель не вправе возвратить товары надлежащего качества, указанные в Перечне непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену, утвержденном Постановлением Правительства РФ от 19.01.1998 № 55.</p>
+
+						<p>Обмен и возврат товара производится на основании Заявления, заполненного и подписанного Покупателем.</p>
+
+						<p><b>Телефон сервисной службы - (495) 229 31 58 доб. 601</b></p>
+
+						<p>Авторизованные сервисные центры:</p>
+
+						<!-- begin grid parters_grid -->
+						<div class="grid grid__6 parters_grid">
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn1.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn2.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn3.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn4.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn5.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn6.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn7.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn8.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn9.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn10.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn11.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn12.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn13.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn14.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn15.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn16.jpg" alt="">
+								</a>
+							</div>
+							<div class="grid__wrapper">
+								<a href="#" class="grid__item">
+									<img src="img/partn17.jpg" alt="">
+								</a>
+							</div>
+						</div>
+						<!-- end grid parters_grid -->
+
+					</div>
 				</div>
 				<!-- end product_tabs -->
 				
@@ -795,6 +997,68 @@
 
 </footer>
 <!-- end footer -->
+
+<!-- begin Modals -->
+<div class="modal fade modal_add_review" id="add_review">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<a href="#" class="modal_close" data-dismiss="modal"></a>
+				<div class="modal_title" id="myModalLabel">Оставьте отзыв о товаре</div>
+			</div>
+			<div class="modal-body">
+				<div class="modal_add_review_rate">
+					<label>Ваша оценка:</label>
+					<a href="#"><img src="img/modal_star.png" alt="1"/></a>
+					<a href="#"><img src="img/modal_star.png" alt="2"/></a>
+					<a href="#"><img src="img/modal_star.png" alt="3"/></a>
+					<a href="#"><img src="img/modal_star.png" alt="4"/></a>
+					<a href="#"><img src="img/modal_star.png" alt="5"/></a>
+				</div>
+				<form action="#" class="modal_add_review_form">
+
+					<div class="grid grid__2 form__row">
+						<div class="grid__wrapper">
+							<div class="grid__item">
+								<label>Имя:</label>
+								<input type="text" placeholder="">
+							</div>
+						</div>
+						<div class="grid__wrapper">
+							<div class="grid__item">
+								<label>Email:</label>
+								<input type="text" placeholder="Ваш E-mail (на сайте не публикуется)">
+							</div>
+						</div>
+					</div>
+
+					<div class="form__row">
+						<label>Комментарий:</label>
+						<textarea></textarea>
+					</div>
+
+					<div class="grid grid__2 form__row">
+						<div class="grid__wrapper">
+							<div class="grid__item">
+								<label>Достоинства:</label>
+								<textarea></textarea>
+							</div>
+						</div>
+						<div class="grid__wrapper">
+							<div class="grid__item">
+								<label>Недостатки:</label>
+								<textarea></textarea>
+							</div>
+						</div>
+					</div>
+
+					<button class="btn btn_danger">Оставить отзыв</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 </body>

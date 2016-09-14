@@ -157,7 +157,7 @@ $btn_contrast_text_color:                        #fff;
 .form__row,.row {
 	@extend %clear_a;
 	&+* {
-		margin-top: 15px;
+		margin-top: 20px;
 	}
 }
 
@@ -319,13 +319,13 @@ input[type=number],
 input[type=datetime], 
 textarea {
 	background-color: white;
-	border: 1px solid #ccc;
-	padding: 7px 15px;
+	border: 1px solid #b3b3b3;
+	padding: 10px 15px;
 	outline: none;
 	font-size: 13px;
 	font-weight: 300;
 	font-family: $main_font_family;
-	@include border-radius(0);
+	@include border-radius(4px);
 	@include trs(0.3s);
 	&:hover {
 	}
@@ -439,6 +439,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 .error {
 	color: red;
+}
+
+label {
+	display: block;
+	color: #666;
+	margin-bottom: 10px;
+}
+
+textarea {
+	min-height: 94px;
+	width: 100%;
 }
 
 // Grid
@@ -645,6 +656,126 @@ input[type=checkbox]:disabled:indeterminate:before {
 	}
 }
 
+// Modal / bootstrap ------------------------------------------
+.modal_close {
+	position: absolute;
+    width: 21px;
+	height: 21px;
+	right: -23px;
+	top: -23px;
+	background: image-url('madal_close.png') no-repeat center center;
+    &:hover {
+    	opacity: .8;
+    }
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal.fade .modal-dialog {
+    @include transform(translate(0,-25%));
+    @include transition(transform .3s ease-out);
+}
+
+.modal.in .modal-dialog {
+    @include transform(translate(0,0));
+    position: relative;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: $color_gray_light;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    @include border-radius(6px);
+    @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+    background-clip: padding-box;
+    outline: 0;
+    padding: 46px 53px;
+    @extend %clear_a;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.modal-backdrop.in {
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+.modal-header {
+    padding: 15px 0;
+    min-height: 16.42857143px;
+    color: #666;
+    font-size: 18px;
+}
+
+.modal-header .close {
+    margin-top: -2px;
+}
+
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    padding: 19px 20px 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer .btn+.btn {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.modal-footer .btn-group .btn+.btn {
+    margin-left: -1px;
+}
+
+.modal-footer .btn-block+.btn-block {
+    margin-left: 0;
+}
 
 
 
@@ -2305,7 +2436,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 .product_tabs, .tabs_wrapp {
 	&_item {
-		padding: 46px 0;
+		padding: 46px 0 96px;
 		display: none;
 		&.active {
 			display: block;
@@ -2333,7 +2464,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 			}
 		}
 		&-review {
-
+			
 		}
 		&-review-yand {
 
@@ -2342,11 +2473,86 @@ input[type=checkbox]:disabled:indeterminate:before {
 
 		}
 		&-payments {
-
 		}
 		&-warranty {
 
 		}
+	}
+}
+
+// Review row ---------------------------------
+.review_row {
+	padding-bottom: 61px;
+	@extend %clear_all;
+	&+.review_row {
+		border-top: 1px solid #ccc;
+		padding-top: 54px;
+	}
+	&_left {
+		float: left;
+		width: 290px;
+		padding-right: 20px;
+	}
+	&_name {
+		color: #5f5f5f;
+		font-weight: 700;
+		margin-bottom: 7px;
+	}
+	&_date {
+		color: #5f5f5f;
+		font-size: 12px;
+	}
+	&_rate {
+		// margin-top: 0px;
+	}
+	&_text {
+		overflow: hidden;
+	}
+	&_more {
+		text-align: center;
+		.btn {
+			width: 210px;
+			height: 45px;
+		}
+	}
+}
+
+
+// Add review modal -------------------------------
+.modal_add_review {
+	.modal-dialog {
+		width: 900px;
+		margin: 5% auto;
+		padding: 46px 53px;
+	}
+	&_rate {
+		color: #666;
+		margin: 15px 0 28px;
+		label {
+			display: inline-block;
+			margin-right: 28px;
+			vertical-align: middle;
+		}
+		a {
+			&:hover {
+				opacity: .6;
+			}
+		}
+	}
+	&_form {
+		input {
+			width: 100%;
+		}
+	}
+	.grid__wrapper {
+		padding-bottom: 0;
+	}
+	.form__row {}
+	.btn {
+		float: right;
+		width: 219px;
+		height: 45px;
+		margin-top: 49px;
 	}
 }
 

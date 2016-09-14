@@ -147,6 +147,8 @@ $(document).ready(function() {
 		event.preventDefault();
 		var target = $(this).attr('href');
 		// console.log($(target));
+		$('.tabs_link').removeClass('active');
+		$(this).addClass('active');
 		$('.tabs_wrapp_item').removeClass('active');
 		$(''+target+'').addClass('active');
 	});

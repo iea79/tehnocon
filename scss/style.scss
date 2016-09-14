@@ -261,6 +261,9 @@ dl {
 	}
 }
 
+.text_danger {
+	color: $color_danger;
+}
 
 
 p {
@@ -1083,6 +1086,20 @@ input[type=checkbox]:disabled:indeterminate:before {
 			margin-right: 0;
 		}
 	}
+
+	.sidebar_news_item {
+		.news_grid_item {
+			min-height: initial;
+		}
+		.news_grid_img {
+			height: 165px;
+			margin-bottom: 20px;
+		}
+		.news_grid_text {
+			height: auto;
+			padding-bottom: 26px;
+		}
+	}
 }
 
 /* Middle
@@ -1108,6 +1125,17 @@ input[type=checkbox]:disabled:indeterminate:before {
 		margin-bottom: 16px;
 		border-bottom: 1px solid #e6e6e6;
 		line-height: 1.1;
+		&_date {
+			color: grey;
+			font-size: 12px;
+			font-weight: 400;
+			margin-top: 10px;
+			&:before {
+				content: image-url('date_ico.png');
+				display: inline-block;
+				vertical-align: top;margin-right:9px;
+			}
+		}
 	}
 	.page_subtitle {
 		font-size: 18px;
@@ -1138,6 +1166,9 @@ input[type=checkbox]:disabled:indeterminate:before {
 			li {
 				padding-top: 5px;
 			}
+		}
+		&+.catalog_grid,&+.parters_grid {
+			margin-top: 66px;
 		}
 	}
 	.sidebar {
@@ -1290,12 +1321,13 @@ input[type=checkbox]:disabled:indeterminate:before {
 	position: relative;
 	padding: 10px 0;
 	border: 1px solid #e6e6e6;
-	@extend %clear_a;
 	background-color: #fff;
+	@extend %clear_a;
 	&_min {
 		position: relative;
 		border: 1px solid #e6e6e6;
 		padding-bottom: 16px;
+		display: block;
 		@extend %clear_a;
 		&_title {
 			background-color: $color_danger;
@@ -1325,6 +1357,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 		}
 		&_img {
 			text-align: center;
+			display: block;
 			margin: 7px 10px 11px;
 		}
 		&_link {
@@ -1980,6 +2013,10 @@ input[type=checkbox]:disabled:indeterminate:before {
 	}
 }
 
+.catalog_grid {
+	padding: 30px 0;
+}
+
 .catalog_grid_wrapper {
 	display: none;
 	&.open {
@@ -2248,7 +2285,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 }
 
 // Product tabs --------------------------------------
-.product_swicher {
+.product_swicher, .tabs {
 	border-bottom: 4px solid #e6e6e6;
 	&_link {
 		display: inline-block;
@@ -2266,7 +2303,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 	}
 }
 
-.product_tabs {
+.product_tabs, .tabs_wrapp {
 	&_item {
 		padding: 46px 0;
 		display: none;
@@ -2314,6 +2351,61 @@ input[type=checkbox]:disabled:indeterminate:before {
 }
 
 
+// Warranty page ------------------------------------
+.parters_grid {
+	.grid__wrapper {
+		display: table;
+		padding-bottom: 0;
+	}
+	.grid__item {
+		display: table-cell;
+		vertical-align: middle;
+		height: 120px;
+		&:hover {
+			opacity: .8;
+		}
+	}
+}
+
+
+// Delyvery page ---------------------------------------
+.delivery_partners_grid {
+	margin-top: 30px;
+	.grid__wrapper {}
+	.grid__item {
+	}
+}
+.delivery_partners_link {
+	display: block;
+	line-height: 24px;
+	color: $color_danger;
+}
+.delivery_partners_img {
+	height: 123px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+.pay_row {
+	margin: 30px 0;
+	&_img {
+		float: left;
+		width: 89px;
+		margin-right: 30px;
+		margin-top: 5px;
+	}
+	&_text {
+		overflow: hidden;
+	}
+	&_title {
+		color: #5f5f5f;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&_description {
+
+	}
+}
 
 /* Footer
  ----------------------------------------------------------------------------- */

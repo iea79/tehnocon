@@ -356,8 +356,7 @@
 					</div>
 					<a href="#" class="header_bottom_right_link cart">
 						<span>Корзина</span>
-						<span class="text_danger">125 560 Р.</span>
-						<i class="cart_bage">12</i>
+						<span>Пуста</span>
 					</a>
 
 				</div>
@@ -383,183 +382,100 @@
 			<ul class="breadcrumb">
 			
 				<li>
-					<a href="#">Интернет-магазин электроники Технокон</a>
+					<a href="#">Главная</a>
 				</li>
 				<li>
-					<a href="#">Корзина</a>
+					<a href="#">Установка техники</a>
 				</li>
 				
 			</ul>
 			<!-- end breadcrumb -->
 			
 			<aside class="sidebar sidebar_right"><!-- Можно менять левый и правый с помощью класса sidebar_right -->
+			
+				<!-- begin product_min -->
+				<div class="product_min">
 				
-				<div class="cart_title">Оформление заказа</div>
+					<div class="product_min_title">Товар дня</div>
 
-				<div class="payment_form">
+					<div class="product_min_sales">Скидка<span class="sales_percent">25%</span></div>
+
+					<div class="product_min_img">
+						<img src="img/tovar.jpg" alt=""/>
+					</div>
+
+					<a href="#" class="product_min_link">Машина стиральная Electrolux с прямым приводом</a>
+
+					<div class="product_min_price">23 990 <span>руб.</span></div>
+
+					<div class="product_min_oldprice">29 990</div>
 					
-					<!-- Box 1 -->
-					<div class="payment_form_box">
-						
-						<div class="payment_form_subtitle">Контактные данные</div>
-						
-						<div class="payment_form_contact">
-							<div class="form__row">
-								<label>Имя<span class="text_danger">*</span>:</label>
-								<div class="form_field"><input type="text" name=""></div>
-							</div>
-
-							<div class="form__row">
-								<label>Телефон<span class="text_danger">*</span>:</label>
-								<div class="form_field"><input type="text" name=""></div>
-							</div>
-
-							<div class="form__row">
-								<label>E-mail<span class="text_danger">*</span>:</label>
-								<!-- пример поля с ошибкой, текст ошибки можно вставить в value -->
-								<div class="form_field"><input class="input_error" type="text" name="" value="Поле обязательно к заполнению"></div>
-							</div>
-
-							<div class="form__row">
-								<label>Адрес доставки<span class="text_danger">*</span>:</label>
-								<div class="form_field"><textarea placeholder="В формате: г. Москва, ул. Бирюзова д. 10 к. 1, кв. 10"></textarea></div>
-							</div>
-						</div>
-
-					</div>
-
-					<!-- Box 2 -->
-					<div class="payment_form_box">
-						
-						<div class="payment_form_subtitle">Способы оплаты</div>
-
-						<!-- begin grid payment_method  выбор через input radio -->
-						<div class="grid grid__2 payment_method">
-							<div class="grid__wrapper">
-								<label class="grid__item">
-									<input type="radio" name="1" checked>
-									<span class="payment_method_label">
-										<div class="payment_method_img"><img src="img/paymeth1.png" alt=""/></div>
-										<div class="payment_method_text">Наличными при получении</div>
-									</span>
-								</label>
-							</div>
-							<div class="grid__wrapper">
-								<label class="grid__item">
-									<input type="radio" name="1">
-									<span class="payment_method_label">
-										<div class="payment_method_img"><img src="img/paymeth2.png" alt=""/></div>
-										<div class="payment_method_text">Банковской картой при получении</div>
-									</span>
-								</label>
-							</div>
-							<div class="grid__wrapper">
-								<label class="grid__item">
-									<input type="radio" name="1">
-									<span class="payment_method_label">									
-										<div class="payment_method_img"><img src="img/paymeth3.png" alt=""/></div>
-										<div class="payment_method_text">Безналичный расчёт (по счёту)</div>
-									</span>
-								</label>
-							</div>
-							<div class="grid__wrapper">
-								<label class="grid__item">
-									<input type="radio" name="1">
-									<span class="payment_method_label">
-										<div class="payment_method_img"><img src="img/paymeth2.png" alt=""/></div>
-										<div class="payment_method_text">Банковской картой on-line</div>
-									</span>
-								</label>
-							</div>
-						</div>
-						<!-- end grid payment_method -->
-
-						<div class="payment_method_message">Система оплаты электронным способом защищена протоколом безопасности</div>
-
-					</div>
-
-					<!-- Box 3 -->
-					<div class="payment_form_box">
-						
-						<div class="payment_form_subtitle">Доставка</div>
-						
-						<div class="payment_form_delivery">
-							
-							<div class="form__row">
-								<label>							
-									<input class="input_check" type="radio" name="2" checked="">
-									Доставка курьером до двери
-								</label>
-							</div>
-
-							<div class="form__row">
-								<label>
-									<input class="input_check" type="radio" name="2">
-									Забрать из пункта самовывоза в Москве
-								</label>
-								<div class="select">
-									<select name="" id="">
-										<option value="">м. Савёловская, ул. Складочная, д.1 стр.40</option>
-										<option value="">м. Савёловская, ул. Складочная, д.1 стр.41</option>
-										<option value="">м. Савёловская, ул. Складочная, д.1 стр.42</option>
-									</select>
-									<div class="select_carret"></div>
-								</div>
-
-							</div>
-
-							<div class="form__row">
-								<label>							
-									<input class="input_check" type="radio" name="2">
-									Доставка по России
-								</label>
-							</div>
-
-							<div class="form_row">
-								<b class="text_danger">Доставка в пределах МКАД бесплатна</b>
-							</div>
-
-						</div>
-
-					</div>
-
-					<!-- Box 4 -->
-					<div class="payment_form_box">
-						
-						<div class="payment_form_subtitle">Хочу оставить комментарий к заказу</div>
-
-						<textarea></textarea>
-
-					</div>
-
-					<!-- Box 5 -->
-					<div class="payment_form_box">
-						
-						<div class="payment_form_subtitle">ИТОГО:</div>
-
-						<div class="payment_form_total">
-							
-							<ul>
-								<li><span>Стоимость:</span><span>17 700 Р</span></li>
-								<li><span>Стоимость доставки:</span><span>750 Р</span></li>
-								<li><span>Всего к оплате:</span><span class="total_ammount">18 450<i>руб.</i></span></li>
-							</ul>
-
-							<button class="btn btn_danger">Оформить заказ</button>
-
-							<div class="form__row">Еженедельная e-mail и sms рассылка</div>
-							<div class="form__row">
-								<label>
-									<input type="checkbox">
-									– получать новые статьи, обзоры, акции
-								</label>
-							</div>
-
-						</div>
-
-					</div>
-
 				</div>
+				<!-- end product_min -->
+
+				<!-- begin subscribe -->
+				<div class="subscribe">
+					
+					<form action="#">
+
+						<legend class="icon_mail"><span>Будьте вкурсе!</span><span>Новости, обзоры, акции</span></legend>
+
+						<input type="text" placeholder="Ваш e-mail">
+
+						<button class="btn btn_danger">Подписаться</button>
+						
+					</form>
+					
+				</div>
+				<!-- end subscribe -->
+			
+				<!-- begin sidebar_news -->
+				<div class="sidebar_news">
+				
+					<div class="sidebar_news_title">Новости и статьи</div>
+
+					<ul class="sidebar_news_list">
+						<li>
+							<span class="date">14.08.16</span>
+							<span>Распродажа товаров для сада и огорода
+								<a href="#">Подробнее</a>
+							</span>
+						</li>
+						<li>
+							<span class="date">25.07.16</span>
+							<span>Мы открываем новое направление: тов...
+								<a href="#">Подробнее</a>
+							</span>
+						</li>
+						<li>
+							<span class="date">10.01.16</span>
+							<span>Налог на товары, ввозимые из-за границы
+								<a href="#">Подробнее</a>
+							</span>
+						</li>
+					</ul>
+
+					<button class="btn">Все новости</button>
+					
+				</div>
+				<!-- end sidebar_news -->
+
+				<!-- begin view_history -->
+				<div class="view_history">
+				
+					<div class="view_history_title">Вы недавно смотрели</div>
+					<a href="#" class="reset_history">Очистить список</a>
+
+					<div class="view_history_slider">
+						
+						<img src="img/iphon.jpg" alt=""/>
+						<img src="img/iphon.jpg" alt=""/>
+						<img src="img/iphon.jpg" alt=""/>
+
+					</div>
+					
+				</div>
+				<!-- end view_history -->
 				
 			</aside>
 			<!-- end sidebar -->
@@ -567,62 +483,134 @@
 			<!-- begin page_content -->
 			<div class="page_content">
 			
-				<div class="cart_title">Ваша корзина</div>
+				<div class="page_title">Установка техники</div>
 				
-				<div class="cart_item">
-					<div class="cart_item_img"><img src="img/cart.jpg" alt=""/></div>
-					<div class="cart_total">
-						<label>Цена</label>
-						<div class="cart_price">5 900 <span>руб.</span></div>
-						<div class="cart_item_number">
-							<div class="plus"></div>
-							<div class="minus"></div>
-							<input type="text" value="1">
-						</div>
-						<a href="#" class="cart_item_delete">Удалить</a>
-					</div>
-					<div class="cart_description">
-						<a href="#" class="cart_name">Фен BBK BHD3223i </a>
-						<div class="cart_articul">Артикул: 4592</div>
-					</div>
-				</div>
+				<p>Уважаемые покупатели, в нашем интернет-магазине <a href="#" class="text_danger">действует скидка 10% на установку прибретенного товара</a>. Установку техники осуществляет наш партнер – сервисная компания “Пульсар”.</p>
 
-				<div class="cart_item">
-					<div class="cart_item_img"><img src="img/cart.jpg" alt=""/></div>
-					<div class="cart_total">
-						<label>Цена</label>
-						<div class="cart_price">5 900 <span>руб.</span></div>
-						<div class="cart_item_number">
-							<div class="plus"></div>
-							<div class="minus"></div>
-							<input type="text" value="1">
-						</div>
-						<a href="#" class="cart_item_delete">Удалить</a>
-					</div>
-					<div class="cart_description">
-						<a href="#" class="cart_name">Фен BBK BHD3223i </a>
-						<div class="cart_articul">Артикул: 4592</div>
-					</div>
-				</div>
+				<p>Для удобства наших клиентов выезд специалиста сервисной компании осуществляется на следующий день (и не позднее 3 дней) с момента вызова.</p>
 
-				<div class="cart_item">
-					<div class="cart_item_img"><img src="img/cart.jpg" alt=""/></div>
-					<div class="cart_total">
-						<label>Цена</label>
-						<div class="cart_price">5 900 <span>руб.</span></div>
-						<div class="cart_item_number">
-							<div class="plus"></div>
-							<div class="minus"></div>
-							<input type="text" value="1">
-						</div>
-						<a href="#" class="cart_item_delete">Удалить</a>
-					</div>
-					<div class="cart_description">
-						<a href="#" class="cart_name">Фен BBK BHD3223i </a>
-						<div class="cart_articul">Артикул: 4592</div>
-					</div>
-				</div>
+				<p>Помните, что неправильная установка и подключение техники неквалифицированным персоналом в дальнейшем может стать причиной отказа Вам в обслуживании техники по гарантии.</p>
 
+				<p>Специалисты сервисной компании «Пульсар» имеют лицензии на все работы, подлежащие лицензированию, и используют только сертифицированные компоненты и материалы.</p>
+
+				<p>Работы оплачиваются по действующему Прейскуранту сервисной компании «Пульсар». Ниже Вы можете ознакомиться с ценами на работы без учета скидки.</p>
+
+				<p><b>Контактные телефоны сервисной компании "Пульсар":</b>  +7 (495) 987 10 43, +7 (495) 987 13 19.</p>
+
+				<table class="table table_line">
+					<thead>
+						<tr>
+							<th>Вид и тип техники</th>
+							<th>Стоимость, руб.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Стиральные, посудомоечные, сушильные машины</td>
+							<td>1 900</td>
+						</tr>
+						<tr>
+							<td>Доплата при установке встраиваемой СМ, ПММ (без навески фасада)</td>
+							<td>400</td>
+						</tr>
+						<tr>
+							<td>Холодильники, подключаемые к сетевому водопроводу</td>
+							<td>2 000</td>
+						</tr>
+						<tr>
+							<td>Холодильники Side-By-Side + к сетевому водопроводу</td>
+							<td>2 600 + 1 200</td>
+						</tr>
+						<tr>
+							<td>Холодильники, морозильники (отдельностоящие)</td>
+							<td>800</td>
+						</tr>
+						<tr>
+							<td>Электрические плиты</td>
+							<td>1 400</td>
+						</tr>
+						<tr>
+							<td>Электрические плиты комбинированные с посудомоечной машиной (TRIO)</td>
+							<td>2 500</td>
+						</tr>
+						<tr>
+							<td>Электрические проточные водонагреватели (через душ)</td>
+							<td>1 500</td>
+						</tr>
+						<tr>
+							<td>Электрические проточные водонагреватели с установкой в систему водоснабжения</td>
+							<td>2 000</td>
+						</tr>
+						<tr>
+							<td>Стиральные и сушильные машины в колонну</td>
+							<td>3 500</td>
+						</tr>
+						<tr>
+							<td>Электрические водонагреватели накопительного типа до 30 литров</td>
+							<td>1 800</td>
+						</tr>
+						<tr>
+							<td>Электрические водонагреватели накопительного типа 50 литров и более</td>
+							<td>2 400</td>
+						</tr>
+						<tr>
+							<td>Диспозеры (измельчители пищевых отходов)</td>
+							<td>1 900</td>
+						</tr>
+						<tr>
+							<td>Встроенные электрические плиты (вар.поверхность или духовка) – 1 единица</td>
+							<td>1 400</td>
+						</tr>
+						<tr>
+							<td>Встроенные холодильники (монтаж в нишу + навеска дверных панелей) + к сетевому водопроводу</td>
+							<td>3 400 + 1 200</td>
+						</tr>
+						<tr>
+							<td>Вытяжки без короба, без монтажа в воздуховод (более 60см +50%)</td>
+							<td>1 500 (2 000)</td>
+						</tr>
+						<tr>
+							<td>Встроенные холодильники S-B-S (монтаж в нишу + навеска дверных панелей) + к сетевому водопроводу</td>
+							<td>3 900 + 1 200</td>
+						</tr>
+						<tr>
+							<td>Вытяжки с коробом, без монтажа в воздуховод (более 60см +50%)</td>
+							<td>2 100 (3 100)</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<table class="table table_line">
+					<thead>
+						<tr>
+							<th>Установка газовой техники</th>
+							<th>Стоимость, руб.</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Газовая варочная поверхность - при наличии проема в столешнице</td>
+							<td>1 700</td>
+						</tr>
+						<tr>
+							<td>Выпил в столешнице</td>
+							<td>700</td>
+						</tr>
+						<tr>
+							<td><b>Газовая техника Candy Trio:</b></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Подключение газовой техники Candu Trio к г/к - к газовой трубе, проверка соединения на утечку, проверка техники и инструктаж.</td>
+							<td>2 000</td>
+						</tr>
+						<tr>
+							<td>Полное подключение</td>
+							<td>3 500</td>
+						</tr>
+					</tbody>
+				</table>
+				
 			</div>
 			<!-- end page_content -->
 

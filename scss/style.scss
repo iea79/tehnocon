@@ -718,6 +718,42 @@ select {
 	float: right;
 }
 
+.table {
+	border-collapse: collapse;
+	border: none;
+	margin: 50px 0;
+	thead {
+			border: 1px solid #e6e6e6;
+			@include background-image(linear-gradient(to top, #f2f2f2 0%, white 100%));
+			@include border-radius(2px);
+		tr {
+			th {
+				height: 53px;
+				padding: 18px 33px;
+				text-align: left;
+				&:last-child {
+					padding-left: 0;
+					width: 202px;
+				}
+			}
+		}
+	}
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: $color_gray_light;
+			}
+			td {
+				height: 30px;
+				padding: 6px 17px;
+				&:last-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
 // Breadcrumb ==================================================================
 .breadcrumb {
 	padding-left: 10px;
@@ -1084,8 +1120,28 @@ select {
 			padding: 10px 0 0px;
 			height: 59px;
 			cursor: pointer;
+			position: relative;
 			&:hover {
 				background-color: #fff;
+			}
+			.text_danger {
+				font-weight: 600;
+			}
+			.cart_bage {
+				position: absolute;
+				top: 8px;
+				left: 41px;
+				min-width: 12px;
+				line-height: 12px;
+				text-align: center;
+				display: inline-block;
+				padding: 0 3px;
+				font-style: normal;
+				background-color: $color_success;
+				@include border-radius(5px);
+				color: white;
+				font-size: 8px;
+				font-weight: 700;
 			}
 			&.lk {
 				width: 226px;

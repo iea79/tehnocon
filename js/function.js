@@ -196,4 +196,14 @@ $(document).ready(function() {
         return false;
     });
 
+    // Map box
+    $('.drop_box').on('click', '.drop_box_link', function(event) {
+    	event.preventDefault();
+    	$(this).toggleClass('open');
+    	$(this).parent().find('.drop_box_dropdown').toggleClass('open');
+    });
+
+    // Fancybox
+    $("a.fancy").fancybox();
+
 });

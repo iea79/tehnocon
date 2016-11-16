@@ -1693,6 +1693,9 @@ select {
 			text-align: center;
 			display: block;
 			margin: 7px 10px 11px;
+			position: relative;
+			padding-bottom: 91%;
+			overflow: hidden;
 		}
 		&_link {
 			margin: 0 25px 9px;
@@ -2373,8 +2376,13 @@ select {
 	}
 	.product_min_img {
 		img {
-			width: 228px;
+			width: initial;
 			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			max-width: 100%;
+			max-height: 100%;
 		}
 	}
 }

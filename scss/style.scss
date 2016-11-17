@@ -1352,10 +1352,11 @@ select {
 		min-width: 537px;
 		// min-height: 649px;
 		background-color: $color_gray_light;
-		left: 270px;
+		left: 269px;
 		top: 1px;
 		padding: 43px 55px 28px;
 		line-height: 20px;
+		border-left: 1px solid #808080;
 		@include columns-text(150px, 3, 25px, 0px, solid, #000);
 		&>li {
 			position: relative;

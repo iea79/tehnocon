@@ -1695,8 +1695,13 @@ select {
 			display: block;
 			margin: 7px 10px 11px;
 			position: relative;
-			padding-bottom: 91%;
+			// padding-bottom: 91%;
 			overflow: hidden;
+			img {
+				// position: absolute;
+				// display: inline-block;
+				// max-width: 100%;
+			}
 		}
 		&_link {
 			margin: 0 25px 9px;

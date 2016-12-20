@@ -2402,7 +2402,7 @@ select {
 		&:before {
 			content: image-url('vesi.png');
 			float: left;
-			display: block;
+			display: inline-block;
 			margin-right: 14px;
 		}
 	}

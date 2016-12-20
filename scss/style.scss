@@ -1823,6 +1823,7 @@ select {
 		.slider_item {
 			text-align: center;
 			height: 284px;
+			outline: 0;
 			// border: 1px solid #ccc;
 			img {
 				height: 100%;
@@ -1832,7 +1833,10 @@ select {
 	}
 	&_prev {
 		height: 98px;
+		padding-left: 2px;
+		padding-right: 2px;
 		.slider_item {
+			outline: 0;
 			cursor: pointer;
 			border: 1px solid #eee;
 			margin: 2px 0px;
@@ -1841,6 +1845,10 @@ select {
 			}
 			&:hover {
 				opacity: .8;
+			}
+			&.slick-current {
+				border-color: #ddd;
+				border-left: 1px solid #ddd;
 			}
 		}
 		.slick-prev {

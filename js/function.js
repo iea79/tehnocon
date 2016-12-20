@@ -64,6 +64,22 @@ $(document).ready(function() {
 		adaptiveHeight: true
 	});
 
+	$('.product_cart_img_big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		infinite: false,
+		asNavFor: '.product_cart_img_prev'
+	});
+	$('.product_cart_img_prev').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.product_cart_img_big',
+		dots: false,
+		infinite: false,
+		focusOnSelect: true
+	});
+
 	var product_slide = $('.product_slider .product,.product_slider_four_columns .product');
 	var product_slide_dots = $('.product_slider .slick-dots,.product_slider_four_columns .slick-dots');
 

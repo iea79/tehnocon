@@ -1830,6 +1830,9 @@ select {
 				display: inline-block;
 			}
 		}
+		.zm-wrap {
+			height: 100%;
+		}
 	}
 	&_prev {
 		height: 98px;
@@ -1840,6 +1843,7 @@ select {
 			cursor: pointer;
 			border: 1px solid #eee;
 			margin: 2px 0px;
+			height: 89px;
 			&:nth-child(n+2) {
 				border-left: none;
 			}
@@ -2674,6 +2678,7 @@ select {
 	&_item {
 		border: 1px solid #e6e6e6 !important;
 		padding: 12px 28px 15px;
+		height: 127px !important;
 		@extend %clear_a;
 		&+.product_cart_more_item {
 			border-top: none !important;

@@ -301,7 +301,6 @@ img {
 }
 
 .container_center {
-	max-width: 1200px;
 	padding: 0 15px;
 	-moz-transform: rotate(0deg);
 	-ms-transform: rotate(0deg);
@@ -309,6 +308,10 @@ img {
 	transform: rotate(0deg);
 	margin-left: auto;
 	margin-right: auto;
+	width: 1200px;
+}
+.hidden {
+	display: none;
 }
 
 // Input text and textarea ================================================
@@ -967,6 +970,7 @@ select {
 	background-color: $btn_default;
 	position: relative;
 	z-index: 2;
+	min-width: 1200px;
 	@extend %clear_a;
 	&_navbar {
 		background-color: $color_gray_el;
@@ -3040,7 +3044,7 @@ select {
 		font-weight: 700;
 		font-style: italic;
 		margin-bottom: 12px;
-		span {
+		i {
 			font-size: 13px;
 			vertical-align: super;
 		}
@@ -3351,6 +3355,7 @@ select {
 	background: $btn_default;
 	color: grey;
 	position: relative;
+	min-width: 1200px;
 	a {
 		color: grey;
 		&:hover {

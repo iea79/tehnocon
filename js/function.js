@@ -225,15 +225,25 @@ $(document).ready(function() {
     var menuHei = $('.catalog_menu_drop').height();
     $('.catalog_menu_submenu').css('minHeight', menuHei);
 
-	// var gridElHei = 0;
-	// 	gridEl = $(".grid_math .grid__wrapper > *");
 
-	// gridEl.each(function () {
-	//    var h_block = parseInt($(this).height());
-	//    if(h_block > gridElHei) {
-	//       gridElHei = h_block;
-	//    };
-	// });
-	// gridEl.height(gridElHei);
+    // Cart calculate total price
+    $('.cart_item_number').on('change', 'input', function() {
+    	// Добавить input рядом с ценой <input type="hidden" class="cart_item_one_price" value="<цена товара без пробелов>">
+    	var itemPrice = $(this).closest('.cart_item').find('.cart_item_one_price').val();
+    		itemCount = $(this).val();
+    		itemPriceField = $(this).closest('.cart_item').find('.cart_item_price');
+    		itemTotalSumm = itemCount*itemPrice;
+    	itemPriceField.html(itemTotalSumm.toLocaleString());
+    });
+
+    $('body .cart_item_price').bind("DOMSubtreeModified", function() {
+    	var totalSumm = 0;
+    		RegEx=/\s/g;
+    		thisSumm = $(this).html().replace(RegEx, "");
+        $('body .cart_item_price').each(function(){
+			totalSumm += parseInt($(this).text().replace(/[^-0-9]/gim,''));
+		});
+		$('#total_ammount').html(totalSumm.toLocaleString())
+    });
 
 });

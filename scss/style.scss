@@ -2866,6 +2866,44 @@ select {
 	}
 }
 
+.reviews_stars_box {
+	display: inline-block;
+	vertical-align: text-bottom;
+	// position:relative;
+	input {
+		// filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		// opacity: 0;
+		// position: absolute;
+		display: none;
+		// top: 0;
+		// z-index: 0;
+		&:checked ~ label {
+			&:before {
+				color: #ffae00;
+			}
+		}
+	}
+	label {
+		background-position: 0 0;
+		float: right;
+		cursor: pointer;
+		// position: relative;
+		// z-index: 1;
+		font-size: 30px;
+		line-height: 1;
+		margin: 0;
+		&:before {
+			content: '★';
+			color: #ddd;
+		}
+		&:hover,&:hover ~ label {
+			&:before {
+				color: #ffae00;
+			}
+		}
+	}
+}
+
 
 // Warranty page ------------------------------------
 .parters_grid {
@@ -2986,7 +3024,7 @@ select {
 			}
 		}
 		.plus {
-			float: left;
+			float: right;
 			&:before,&:after  {
 				content: '';
 				display: block;
@@ -3007,7 +3045,7 @@ select {
 			}
 		}
 		.minus {
-			float: right;
+			float: left;
 			&:after {
 				content: '';
 				display: block;
